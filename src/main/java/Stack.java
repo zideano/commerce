@@ -3,17 +3,19 @@ import java.util.Arrays;
 public class Stack<T> {
     private T[] arr;
     private int index;
+    private int maxSize;
 
     Stack(int size) {
         arr = (T[]) new Object[size];
         index = 0;
+        this.maxSize = size;
     }
 
     public void push(T data) {
         if (!isFull()) {
             arr[index++] = data;
         } else {
-            System.out.println("The stack is full");
+            throw new  RuntimeException("The stack is full");
         }
     }
 
@@ -23,7 +25,7 @@ public class Stack<T> {
         if (!isEmpty()) {
             temp = arr[--index];
         } else {
-            System.out.println("The stack is empty");
+            throw new  RuntimeException("The stack is empty");
         }
 
         return temp;
@@ -39,6 +41,10 @@ public class Stack<T> {
 
     public boolean isEmpty() {
         return index == 0;
+    }
+
+    public int capacity() {
+        return maxSize;
     }
 
     @Override
