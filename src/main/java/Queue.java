@@ -5,12 +5,14 @@ public class Queue<T> {
     private int index;
     private int front;
     private int rear;
+    private int maxSize;
 
     public Queue(int size) {
         arr = (T[]) new Object[size];
         index = 0;
         rear = -1;
         front = 0;
+        this.maxSize = size;
     }
 
     public void enqueue(T data) {
@@ -47,6 +49,10 @@ public class Queue<T> {
     }
 
     public T peekRear() {
+        if (rear == -1) {
+            throw new RuntimeException("Rear index is negative");
+        }
+
         return arr[rear];
     }
 
@@ -66,6 +72,14 @@ public class Queue<T> {
         }
 
         System.out.printf("]");
+    }
+
+    public int capacity() {
+        return maxSize;
+    }
+
+    public int size() {
+        return index;
     }
 
     @Override
