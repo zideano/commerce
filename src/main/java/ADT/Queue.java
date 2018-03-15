@@ -1,3 +1,5 @@
+package ADT;
+
 import java.util.Arrays;
 
 public class Queue<T> {
@@ -21,7 +23,7 @@ public class Queue<T> {
             arr[rear] = data;
             index++;
         } else {
-            throw new RuntimeException("Queue is full");
+            throw new RuntimeException("ADT.Queue is full");
         }
     }
 
@@ -38,7 +40,7 @@ public class Queue<T> {
 
             index--;
         } else {
-            throw new RuntimeException("Queue is empty");
+            throw new RuntimeException("ADT.Queue is empty");
         }
 
         return temp;
@@ -67,8 +69,8 @@ public class Queue<T> {
     public void peek() {
         System.out.printf("[ ");
 
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
+        for (T anArr : arr) {
+            System.out.print(anArr + " ");
         }
 
         System.out.printf("]");
@@ -84,7 +86,7 @@ public class Queue<T> {
 
     @Override
     public String toString() {
-        return "Queue{" +
+        return "ADT.Queue{" +
                 "arr=" + Arrays.toString(arr) +
                 '}';
     }

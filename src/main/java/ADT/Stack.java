@@ -1,3 +1,5 @@
+package ADT;
+
 import java.util.Arrays;
 
 public class Stack<T> {
@@ -5,7 +7,7 @@ public class Stack<T> {
     private int index;
     private int maxSize;
 
-    Stack(int size) {
+    public Stack(int size) {
         arr = (T[]) new Object[size];
         index = 0;
         this.maxSize = size;
@@ -20,7 +22,7 @@ public class Stack<T> {
     }
 
     public T pop() {
-        T temp = null;
+        T temp;
 
         if (!isEmpty()) {
             temp = arr[--index];
@@ -49,7 +51,7 @@ public class Stack<T> {
 
     @Override
     public String toString() {
-        return "Stack{" +
+        return "ADT.Stack{" +
                 "arr=" + Arrays.toString(arr) +
                 ", index=" + index +
                 '}';
