@@ -12,5 +12,13 @@ public class NodeTest {
 
         Integer data = node.getData();
         Assert.assertTrue(data == 1);
+
+        Node<Integer> node2 = new Node<>(2);
+        Node<Integer> node3 = new Node<>(3);
+
+        node.next = node2;
+        node2.next = node3;
+
+        Assert.assertEquals(3, Node.size(node));
     }
 }

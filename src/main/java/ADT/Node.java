@@ -27,7 +27,7 @@ public class Node<T> {
 
     @Override
     public String toString() {
-        String str = "";
+        String str = " -> ";
         str += data;
         return str;
     }
