@@ -1,5 +1,6 @@
 import ADT.Node;
 import ADT.Queue;
+import ADT.SinglyLinkedList;
 import ADT.Stack;
 
 public class Start {
@@ -12,6 +13,10 @@ public class Start {
 //        } catch (IOException e) {
 //            e.printStackTrace();
 //        }
+
+        /*
+            Queue
+         */
 
         Queue<String> queue = new Queue<>(6);
         queue.enqueue("I");
@@ -29,6 +34,10 @@ public class Start {
         System.out.println();
 
 
+        /*
+          Node
+         */
+
         Node<Integer> nodeA = new Node<>(4);
         Node<Integer> nodeB = new Node<>(3);
         Node<Integer> nodeC = new Node<>(7);
@@ -44,6 +53,22 @@ public class Start {
         String original = "Hello";
         System.out.println("Original string -> " + original);
         System.out.println("Reverse string -> " + reverseString(original));
+
+        /*
+            LinkedList
+         */
+        SinglyLinkedList<String> singlyLinkedList = new SinglyLinkedList<>(new Node<>("first"));
+        singlyLinkedList.insert("second");
+        singlyLinkedList.insert("third");
+        singlyLinkedList.insert("fourth");
+        singlyLinkedList.insertAfter("first", "test");
+        singlyLinkedList.deleteFirst();
+        singlyLinkedList.delete("third");
+        singlyLinkedList.deleteLast();
+        singlyLinkedList.print();
+//        singlyLinkedList.insert("third");
+//        singlyLinkedList.insert("fourth");
+//        singlyLinkedList.print();
 
     }
 
