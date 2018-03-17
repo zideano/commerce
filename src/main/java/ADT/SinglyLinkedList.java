@@ -159,6 +159,26 @@ public class SinglyLinkedList<T> {
         return temp;
     }
 
+    public int search(T key) {
+        if (isEmpty()) {
+            throw new RuntimeException("Empty list");
+        }
+
+        Node<T> current = first;
+        int pos = 0;
+
+        while (current != null && !key.equals(current.getData())) {
+            current = current.next;
+            pos++;
+        }
+
+        if (current != null && key.equals(current.getData())) {
+            return pos;
+        } else {
+            return -1;
+        }
+    }
+
     public void print() {
         if (isEmpty()) {
             System.out.println("The LinkedList is empty");

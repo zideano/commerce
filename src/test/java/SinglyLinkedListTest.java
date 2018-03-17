@@ -39,4 +39,20 @@ public class SinglyLinkedListTest {
         Node<Character> characterNode2 = singlyLinkedList.delete('d');
         Assert.assertEquals('d', characterNode2.toString().charAt(0));
     }
+
+    @Test
+    public void testSearchMethod() {
+        SinglyLinkedList<String> singlyLinkedList = new SinglyLinkedList<>(new Node<>("set"));
+        singlyLinkedList.insert("link");
+        singlyLinkedList.insert("queue");
+        singlyLinkedList.insert("stack");
+
+        int index = singlyLinkedList.search("queue");
+
+        Assert.assertTrue(index == 2);
+
+        int index2 = singlyLinkedList.search("false");
+
+        Assert.assertTrue(index2 == -1);
+    }
 }
