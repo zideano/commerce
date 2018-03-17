@@ -2,6 +2,11 @@ package ADT;
 
 import java.util.Arrays;
 
+/**
+ * Generic stack data structure that is capable to deal
+ * with any object data type
+ * @param <T>
+ */
 public class Stack<T> {
     private T[] arr;
     private int index;
@@ -13,6 +18,13 @@ public class Stack<T> {
         this.maxSize = size;
     }
 
+    /**
+     * The push instance method is used to push data
+     * onto the top of the stack in the LIFO order
+     * where the last element added will be the first
+     * one that gets pop off the stack.
+     * @param data
+     */
     public void push(T data) {
         if (!isFull()) {
             arr[index++] = data;
@@ -21,6 +33,12 @@ public class Stack<T> {
         }
     }
 
+    /**
+     * This method pops off the lastest data added onto
+     * the stack in the last-in-first-out (LIFO) order.
+     *
+     * @return the last element placed onto the stack.
+     */
     public T pop() {
         T temp;
 

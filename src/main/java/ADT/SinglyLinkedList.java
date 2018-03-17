@@ -7,10 +7,18 @@ public class SinglyLinkedList<T> {
         this.first = first;
     }
 
+    /**
+     *
+     * @return if LinkedList is empty or not.
+     */
     public boolean isEmpty() {
         return first == null;
     }
 
+    /**
+     *
+     * @param data to be inserted at the front of the LinkedList
+     */
     public void insertFirst(T data) {
         Node<T> newNode = new Node<>(data);
 
@@ -20,6 +28,11 @@ public class SinglyLinkedList<T> {
         }
     }
 
+    /**
+     * Traverse the LinkedList until the end is reached.
+     *
+     * @param data to be inserted at the end of the LinkedList
+     */
     public void insert(T data) {
         if (isEmpty()) {
             System.out.println("No node have been created");
@@ -34,10 +47,16 @@ public class SinglyLinkedList<T> {
             current = current.next;
         }
 
-        Node<T> newNode = new Node<>(data);
-        current.next = newNode;
+        current.next = new Node<>(data);
     }
 
+    /**
+     * The insertAfter method traverse the LinkedList until
+     * a match of the key is found or not.
+     *
+     * @param key to search for in the LinkedList
+     * @param data that will be inserted if key present
+     */
     public void insertAfter(T key, T data) {
         if (isEmpty()) {
             throw new NullPointerException("Cannot insert anything - empty list");
@@ -57,6 +76,10 @@ public class SinglyLinkedList<T> {
         }
     }
 
+    /**
+     *
+     * @return the deleted first node
+     */
     public Node<T> deleteFirst() {
         if (isEmpty()) {
             throw new NullPointerException("Nothing to delete");
@@ -67,6 +90,13 @@ public class SinglyLinkedList<T> {
         return temp;
     }
 
+    /**
+     * Search the LinkedList for the node with the first match
+     * of the key.
+     *
+     * @param key is node to be deleted if matched
+     * @return the deleted node if the key is present
+     */
     public Node<T> delete(T key) {
         if (isEmpty()) {
             throw new RuntimeException("The LinkedList is empty");
@@ -96,10 +126,18 @@ public class SinglyLinkedList<T> {
             temp = current;
         }
 
+        assert previous != null;
         previous.next = current.next;
         return temp;
     }
 
+    /**
+     * This delete method will traverse the LinkedList
+     * until the end of the list is reached, then the
+     * link to the last element is return and deleted
+     *
+     * @return the deleted element from the last position
+     */
     public Node<T> deleteLast() {
         if (isEmpty()) {
             throw new NullPointerException("The LinkedList is empty");
@@ -136,6 +174,10 @@ public class SinglyLinkedList<T> {
         }
     }
 
+    /**
+     *
+     * @return the total size of the LinkedList
+     */
     public int size() {
         int length = 0;
 

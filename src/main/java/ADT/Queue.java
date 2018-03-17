@@ -2,6 +2,12 @@ package ADT;
 
 import java.util.Arrays;
 
+/**
+ * Generic queue class is able to create a queue of elements
+ * with any object data types, creating elements in the order
+ * first-in-first-out (FIFO).
+ * @param <T>
+ */
 public class Queue<T> {
     private T[] arr;
     private int index;
@@ -17,6 +23,10 @@ public class Queue<T> {
         this.maxSize = size;
     }
 
+    /**
+     * Enqueue data into the queue in FIFO manner
+     * @param data is added to the front of queue
+     */
     public void enqueue(T data) {
         if (!isFull()) {
             rear++;
@@ -27,6 +37,12 @@ public class Queue<T> {
         }
     }
 
+    /**
+     * The dequeue method is responsible for de-queueing
+     * elements from the front of the queue.
+     *
+     * @return the element at the head of the queue.
+     */
     public T dequeue() {
         T temp;
 
@@ -66,14 +82,18 @@ public class Queue<T> {
         return index == arr.length;
     }
 
+    /**
+     * The peek method will print a complete view
+     * of the current queue.
+     */
     public void peek() {
-        System.out.printf("[ ");
+        System.out.print("[ ");
 
         for (T anArr : arr) {
             System.out.print(anArr + " ");
         }
 
-        System.out.printf("]");
+        System.out.print("]");
     }
 
     public int capacity() {
