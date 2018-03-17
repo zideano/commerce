@@ -1,4 +1,5 @@
 import ADT.BinaryTree;
+import ADT.Queue;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -103,5 +104,15 @@ public class BinaryTreeTest {
         Assert.assertEquals(result, result2);
         Assert.assertNotEquals(result, result3);
         Assert.assertNotEquals(result2, result3);
+    }
+
+    @Test(expected = RuntimeException.class)
+    public void testForExceptionThrownWithWrongDataType() {
+        Queue<Integer> queue = new Queue<>(2);
+        queue.enqueue(3);
+        BinaryTree<Queue> binaryTree = new BinaryTree<>(new Queue(2));
+
+        binaryTree.insert(queue);
+        binaryTree.find(queue);
     }
 }
