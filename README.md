@@ -6,5 +6,5 @@ Data structures and algorithms forms the backbone of computer science, and are t
 
 ### Big O Notation
 
-![big_o_notation](https://user-images.githubusercontent.com/3081581/37565849-d12a96a6-2aa8-11e8-9a9f-9ce0b2c9901c.jpeg)
+![big_o](https://user-images.githubusercontent.com/3081581/37565876-2b588c0a-2aa9-11e8-8d5e-382ffb42907c.jpeg)
 
