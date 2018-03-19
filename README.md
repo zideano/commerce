@@ -1,4 +1,10 @@
-# Data Structures & Algorithms
+## Data Structures & Algorithms
 
-Data structures and algorithms forms the backbone of computer science, and are the cornerstone of modern computing. Choosing the correct root structures and algorithms in an application can become the determining factor in an efficiently written object oriented enterprise level application. With the right algorithms and root structures we can achieve an efficient way of storing root, a benchmark for measuring complexity as well as following good object oriented programming (OOP) principles.
+## Data Structure
+
+Data structures and algorithms forms the backbone of computer science, and are the cornerstone of modern computing. Choosing the correct data structures and algorithms in an application can become the determining factor in an efficiently written object oriented enterprise level application or not. With the right algorithms and data structures we can achieve an efficient way of storing data, a benchmark for measuring complexity as well as following good object oriented programming (OOP) principles.
+
+### Big O Notation
+
+![big_o](https://user-images.githubusercontent.com/3081581/37565876-2b588c0a-2aa9-11e8-8d5e-382ffb42907c.jpeg)
 
