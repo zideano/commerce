@@ -53,11 +53,11 @@ public class SortingUtils {
      */
     public static int binarySearch(int[] arr, int key) {
 
-        int len = arr.length - 1;
+        int len = arr.length;
         int low = 0;
         int high = len;
 
-        if (len == 0 || len < 0) {
+        if (len == 0) {
             throw new IllegalStateException("Array storage insufficient");
         }
 
