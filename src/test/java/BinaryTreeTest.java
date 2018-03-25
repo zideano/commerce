@@ -51,6 +51,7 @@ public class BinaryTreeTest {
         Assert.assertTrue(amour);
         Assert.assertTrue(tree);
         Assert.assertFalse(wrong);
+
     }
 
     @Test
