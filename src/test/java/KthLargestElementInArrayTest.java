@@ -11,6 +11,12 @@ public class KthLargestElementInArrayTest {
         int k = 2;
 
         int kthLargest = kthLargestElementInArray.findKthLargest(nums, k);
+        int kthLargest2 = kthLargestElementInArray.findKthLargest(nums, 1);
+        int kthLargest3 = kthLargestElementInArray.findKthLargest(nums, 3);
+
         Assert.assertTrue( kthLargest == 5);
+        Assert.assertEquals(6, kthLargest2);
+        Assert.assertEquals(4, kthLargest3);
+
     }
 }
