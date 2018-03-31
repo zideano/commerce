@@ -13,17 +13,19 @@ public class CommonNodeAncestor {
             return root;
         }
 
-        Tree left = findFirstCommonAncestor(root.getLeft(), node1, node2);
-        Tree right = findFirstCommonAncestor(root.getRight(), node1, node2);
+        Tree left = findFirstCommonAncestor(root.left, node1, node2);
+        Tree right = findFirstCommonAncestor(root.right, node1, node2);
 
-        if ((left == node1 && right == node2) || (left == node2 && right == node2)) {
+        if (left != null && right != null) {
             return root;
-        }
-
-        if (left != null) {
-            return left;
+        } else if (left == null && right == null) {
+            return null;
         } else {
-            return right;
+            if (left == null) {
+                return right;
+            } else {
+                return left;
+            }
         }
     }
 

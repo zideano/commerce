@@ -3,8 +3,8 @@ package ADT;
 import java.util.Objects;
 
 public class Tree {
-    Tree left;
-    Tree right;
+    public Tree left;
+    public Tree right;
     private int value;
 
     public Tree(int root) {
