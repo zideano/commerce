@@ -29,9 +29,11 @@ public class KthSmallestElementInBSTTest {
         int kthSmallest = kthSmallestElementInBST.kthSmallest(tree, 5);
         int kthSmallest2 = kthSmallestElementInBST.kthSmallest(tree, 4);
         int kthSmallest3 = kthSmallestElementInBST.kthSmallest(tree, 6);
+        int kthSmallest4 = kthSmallestElementInBST.kthSmallest(tree, 3);
 
         Assert.assertEquals(9, kthSmallest);
         Assert.assertEquals(8, kthSmallest2);
         Assert.assertEquals(10, kthSmallest3);
+        Assert.assertEquals(7, kthSmallest4);
     }
 }
