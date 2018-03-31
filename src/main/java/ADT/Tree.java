@@ -6,6 +6,7 @@ public class Tree {
     public Tree left;
     public Tree right;
     private int value;
+    private int size;
 
     public Tree(int root) {
         this.value = root;
@@ -27,7 +28,9 @@ public class Tree {
         if (data < this.value) {
             if (left == null) {
                 left = new Tree(data);
+                size++;
             } else {
+                size++;
                 left.insert(data);
             }
         } else if (data == this.value) {
@@ -35,7 +38,9 @@ public class Tree {
         } else {
             if (right == null) {
                 right = new Tree(data);
+                size++;
             } else {
+                size++;
                 right.insert(data);
             }
         }
@@ -76,5 +81,9 @@ public class Tree {
         if (right != null) {
             right.print();
         }
+    }
+
+    public int getSize() {
+        return size;
     }
 }
