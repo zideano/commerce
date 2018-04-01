@@ -164,6 +164,7 @@ public class SortingUtils {
                 left++;
             }
 
+            // Iterate from right until we find a value to be swapped
             while (arr[right] > pivot) {
                 right--;
             }
