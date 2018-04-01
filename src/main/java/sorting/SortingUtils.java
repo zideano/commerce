@@ -1,6 +1,7 @@
 package sorting;
 
 import ADT.Stack;
+import com.sun.istack.internal.NotNull;
 
 public class SortingUtils {
 
@@ -106,7 +107,7 @@ public class SortingUtils {
      * @param arr input unsorted array
      * @return sorted array
      */
-    public static int[] selectionSort(int[] arr) {
+    public static int[] selectionSort(@NotNull int[] arr) {
         int length = arr.length;
 
         for (int i = 0; i < length; i++) {
@@ -126,6 +127,62 @@ public class SortingUtils {
         }
 
         return arr;
+    }
+
+    /**
+     * Sort an unsorted array using quick sort algorithm
+     *
+     * @param arr array to be sorted
+     * @param left start index
+     * @param right end index
+     */
+    public static void quickSort(int[] arr, int left, int right) {
+
+        int pos = partition(arr, left, right);
+
+        /*
+         * Recursively call quickSort(int[] arr) if
+         * these conditions holds until all values
+         * have been sorted
+         */
+        if (left < pos-1) {
+            quickSort(arr, left, pos-1);
+        }
+
+        if (pos < right) {
+            quickSort(arr, pos, right);
+        }
+    }
+
+    private static int partition(@NotNull int[] arr, int left, int right) {
+        int pivot = arr[(left + right) / 2];
+
+        while (left <= right) {
+
+            // Iterate from left until we find a value to be swapped
+            while (arr[left] < pivot) {
+                left++;
+            }
+
+            while (arr[right] > pivot) {
+                right--;
+            }
+
+            if (left <= right) {
+                swap(arr, left, right);
+                left++;
+                right--;
+            }
+
+        }
+
+        return left;
+    }
+
+    private static void swap(int[] arr, int left, int right) {
+        int temp = arr[left];
+        arr[left] = arr[right];
+        arr[right] = temp;
     }
 
     /**

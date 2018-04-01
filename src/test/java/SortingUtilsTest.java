@@ -53,4 +53,14 @@ public class SortingUtilsTest {
         Assert.assertNotEquals(unsorted_arr, sorted);
     }
 
+    @Test
+    public void testQuickSort() {
+        int[] arr = {2, 89, 1, 3, 56, 10, 23, 8, 9};
+        int[] sorted_arr = {1, 2, 3, 8, 9, 10, 23, 56, 89};
+
+        SortingUtils.quickSort(arr, 0, arr.length-1);
+        Assert.assertArrayEquals("These two arrays should now be equalled", sorted_arr, arr);
+
+    }
+
 }
