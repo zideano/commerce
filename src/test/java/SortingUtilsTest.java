@@ -25,7 +25,7 @@ public class SortingUtilsTest {
         Arrays.sort(arr);
 
         int index = SortingUtils.binarySearch(arr, key);
-        Assert.assertTrue(index == 5);
+        Assert.assertEquals(5, index);
     }
 
     @Test
@@ -38,6 +38,19 @@ public class SortingUtilsTest {
 
         int[] sorted2 = SortingUtils.insertionSort(arr);
         Assert.assertArrayEquals(sorted_arr, sorted2);
+    }
+
+    @Test
+    public void testSelectionSort() {
+        int[] arr = new int[] {2, 89, 1, 3, 56, 10, 23, 8, 9};
+        int[] sorted_arr = {1, 2, 3, 8, 9, 10, 23, 56, 89};
+        int[] unsorted_arr = {2, 1, 3, 8, 9, 10, 23, 56, 89};
+
+        int[] sorted = SortingUtils.selectionSort(arr);
+        Assert.assertArrayEquals("These arrays should be equal", sorted_arr, sorted);
+
+        Assert.assertNotNull(sorted);
+        Assert.assertNotEquals(unsorted_arr, sorted);
     }
 
 }
