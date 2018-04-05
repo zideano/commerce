@@ -159,13 +159,19 @@ public class SinglyLinkedList<T> {
         return temp;
     }
 
+    /**
+     * This method searches for a key inside our Linkedlist
+     *
+     * @param key to be searched for in the Linkedlist
+     * @return the node where the key is found
+     */
     public int search(T key) {
         if (isEmpty()) {
             throw new RuntimeException("Empty list");
         }
 
         Node<T> current = first;
-        int pos = 0;
+        int pos = 1;
 
         while (current != null && !key.equals(current.getData())) {
             current = current.next;
