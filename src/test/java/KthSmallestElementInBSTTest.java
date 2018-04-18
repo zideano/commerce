@@ -14,7 +14,7 @@ public class KthSmallestElementInBSTTest {
          *            /    \
          *           6      10
          *          / \    /  \
-         *         5  7   9    10
+         *         5  7   9    11
          *
          *     The 5th smallest element in the BST is 9 using in-order traversal
          */
