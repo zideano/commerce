@@ -59,7 +59,7 @@ public class SortingUtils {
         int high = len;
 
         if (len == 0) {
-            throw new IllegalStateException("Array storage insufficient");
+            throw new IllegalStateException("Insufficient array capacity - empty arrays cannot be sorted.");
         }
 
         while (low < high) {
