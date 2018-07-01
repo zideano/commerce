@@ -29,7 +29,7 @@ public class Stack<T> {
         if (!isFull()) {
             arr[index++] = data;
         } else {
-            throw new  RuntimeException("The stack is full");
+            throw new  RuntimeException("The stack is full.");
         }
     }
 
@@ -51,18 +51,37 @@ public class Stack<T> {
         return temp;
     }
 
+    /**
+     * Check if the stack is already full
+     *
+     * @return true if stack is full/false otherwise
+     */
     public boolean isFull() {
         return index == arr.length;
     }
 
+    /**
+     * Check the size of the stack
+     *
+     * @return size of the stack
+     */
     public int size() {
         return index;
     }
 
+    /**
+     *
+     * @return true if stack empty/false otherwise
+     */
     public boolean isEmpty() {
         return index == 0;
     }
 
+    /**
+     * Check the stack capacity
+     *
+     * @return capacity of stack
+     */
     public int capacity() {
         return maxSize;
     }
