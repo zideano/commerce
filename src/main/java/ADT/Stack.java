@@ -88,7 +88,7 @@ public class Stack<T> {
 
     @Override
     public String toString() {
-        return "ADT.Stack{" +
+        return "Stack{" +
                 "arr=" + Arrays.toString(arr) +
                 ", index=" + index +
                 '}';
