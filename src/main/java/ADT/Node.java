@@ -14,7 +14,7 @@ package ADT;
         }
 
         /**
-         * This non-instance method takes a node as input and iterate
+         * This static method takes a node as input and iterate
          * over all the nodes in this link of nodes, then print the
          * total nodes in the link.
          *
